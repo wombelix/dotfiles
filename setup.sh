@@ -1,5 +1,9 @@
 #!/bin/bash
 
+# SPDX-FileCopyrightText: 2024 Dominik Wombacher
+#
+# SPDX-License-Identifier: MIT
+
 declare -A DOTFILES
 DOTFILES[".vimrc"]="vimrc"
 DOTFILES[".tmux.conf"]="tmux.conf"

@@ -1,3 +1,7 @@
+" SPDX-FileCopyrightText: 2024 Dominik Wombacher
+"
+" SPDX-License-Identifier: MIT
+
 filetype on
 filetype plugin on
 filetype indent on
