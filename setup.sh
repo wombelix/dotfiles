@@ -9,7 +9,7 @@ DOTFILES[".vimrc"]="vimrc"
 DOTFILES[".tmux.conf"]="tmux.conf"
 
 declare -A PACKAGES
-PACKAGES["common"]="git tmux fzf"
+PACKAGES["common"]="git tmux"
 PACKAGES["opensuse"]="${PACKAGES["common"]} vim"
 PACKAGES["fedora"]="${PACKAGES["common"]} vim-enhanced-2"
 
@@ -61,6 +61,14 @@ install_vim_plugins() {
     fi
 }
 
+install_fzf() {
+    echoinfo "Install fzf"
+    if [ ! -d "$HOME/.fzf" ]; then
+        git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+        "$HOME/.fzf/install"
+    fi
+}
+
 configure_bash() {
     echoinfo "Configure Bash"
     if ! grep -Fxq 'set -o vi' "$HOME/.bashrc"; then
@@ -99,6 +107,7 @@ fi
 backup_files
 create_symlinks
 install_vim_plugins
+install_fzf
 configure_bash
 
 exit $RC
