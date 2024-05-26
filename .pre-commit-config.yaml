@@ -21,6 +21,7 @@ repos:
       entry: shellcheck
       language: python
       types: [shell]
+      args: ["-x"] # follow source files
       require_serial: true # shellcheck can detect sourcing this way
 -   repo: https://github.com/fsfe/reuse-tool
     rev: v3.0.2

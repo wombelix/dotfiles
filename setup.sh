@@ -17,27 +17,27 @@ PACKAGES["fedora"]="${PACKAGES["common"]} vim-enhanced-2"
 
 RC=0
 
-DOTFILESDIR=$(dirname $0)
+DOTFILESDIR=$(dirname "$0")
 if [[ "$DOTFILESDIR" == "." ]]; then
     DOTFILESDIR=$PWD
 fi
 
 
 echoerr() {
-    echo "[ERROR] $@" 1>&2;
+    echo "[ERROR] $*" 1>&2;
     RC=1
 }
 
 echoinfo() {
-    echo "[INFO] $@"
+    echo "[INFO] $*"
 }
 
 backup_files() {
     echoinfo "Backup files"
     for i in "${!DOTFILES[@]}"
     do
-      if ([ -f $HOME/$i ] && [ ! -L $HOME/$i ]) || [ -d $HOME/$i ]; then
-	     mv $HOME/$i $HOME/$i.bak
+      if { [ -f "$HOME/$i" ] && [ ! -L "$HOME/$i" ] ;} || [ -d "$HOME/$i" ]; then
+	     mv "$HOME/$i" "$HOME/$i.bak"
         fi
     done
 }
@@ -46,16 +46,16 @@ create_symlinks() {
     echoinfo "Create symlinks"
     for i in "${!DOTFILES[@]}"
     do
-        if [ ! -L $HOME/$i ]; then
-             ln -s $DOTFILESDIR/${DOTFILES[$i]} $HOME/$i
+        if [ ! -L "$HOME/$i" ]; then
+             ln -s "$DOTFILESDIR/${DOTFILES[$i]}" "$HOME/$i"
         fi
     done
 }
 
 install_vim_plugins() {
     echoinfo "Install VIM plugins"
-    mkdir -p $HOME/.vim/pack/plugins/start/
-    if [ ! -d $HOME/.vim/pack/plugins/start/vim-tmux-navigator ]; then
+    mkdir -p "$HOME/.vim/pack/plugins/start/"
+    if [ ! -d "$HOME/.vim/pack/plugins/start/vim-tmux-navigator" ]; then
         git clone git@github.com:christoomey/vim-tmux-navigator.git \
           ~/.vim/pack/plugins/start/vim-tmux-navigator
     fi
@@ -63,8 +63,8 @@ install_vim_plugins() {
 
 configure_bash() {
     echoinfo "Configure Bash"
-    if ! grep -Fxq 'set -o vi' $HOME/.bashrc; then 
-        echo 'set -o vi' >> $HOME/.bashrc 
+    if ! grep -Fxq 'set -o vi' "$HOME/.bashrc"; then
+        echo 'set -o vi' >> "$HOME/.bashrc"
     fi
 }
 
@@ -74,10 +74,12 @@ if [[ "$OSTYPE" == "linux"* ]]; then
         . /etc/os-release
         if [[ "$ID" == "opensuse"* ]]; then
             echoinfo "openSUSE"
+            # shellcheck disable=SC2086
             sudo zypper in -y ${PACKAGES["opensuse"]}
         elif [[ "$ID" == "fedora"* ]]; then
             echoinfo "Fedora"
-	    sudo dnf in -y ${PACKAGES["fedora"]}
+            # shellcheck disable=SC2086
+            sudo dnf in -y ${PACKAGES["fedora"]}
         else
             echoerr "Unknown Linux Distribution"
         fi
