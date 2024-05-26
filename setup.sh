@@ -12,6 +12,7 @@ declare -A PACKAGES
 PACKAGES["common"]="git tmux"
 PACKAGES["opensuse"]="${PACKAGES["common"]} vim"
 PACKAGES["fedora"]="${PACKAGES["common"]} vim-enhanced-2"
+PACKAGES["macos"]="tmux fzf"
 
 ##### Nothing to customize from here #####
 
@@ -97,6 +98,14 @@ if [[ "$OSTYPE" == "linux"* ]]; then
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # MacOS
     echoinfo "MacOS"
+    if ! command -v brew &> /dev/null; then
+        echoerr "brew not installed"
+        RC=1
+    else
+        # shellcheck disable=SC2086
+        brew install ${PACKAGES["macos"]}
+    fi
+
 elif [[ "$OSTYPE" == "freebsd"* ]]; then
     # FreeBSD
     echoinfo "FreeBSD"
@@ -104,10 +113,12 @@ else
     echoerr "Unknown operating system"
 fi
 
-backup_files
-create_symlinks
-install_vim_plugins
-install_fzf
-configure_bash
+if [[ "$RC" == 0 ]]; then
+    backup_files
+    create_symlinks
+    install_vim_plugins
+    install_fzf
+    configure_bash
+fi
 
 exit $RC
