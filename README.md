@@ -20,12 +20,10 @@ Just my configs and dotfiles for things like `vim` or `tmux` with some helper sc
 
 The primary location is: https://git.sr.ht/~wombelix/dotfiles
 
-<!--
 Mirrors of the repository are available on
 [Codeberg](https://codeberg.org/wombelix/dotfiles),
 [Gitlab](https://gitlab.com/wombelix/dotfiles) and
 [Github](https://github.com/wombelix/dotfiles).
--->
 
 ## Contribute
 
