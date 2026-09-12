@@ -8,7 +8,10 @@ SPDX-License-Identifier: MIT
 
 Just my configs and dotfiles for things like `vim` or `tmux` with some helper scripts.
 
-[![REUSE status](https://api.reuse.software/badge/git.sr.ht/~wombelix/dotfiles)](https://api.reuse.software/info/git.sr.ht/~wombelix/dotfiles)
+<!-- markdownlint-disable MD013 -->
+[![REUSE status](https://api.reuse.software/badge/github.com/wombelix/dotfiles)](https://api.reuse.software/info/github.com/wombelix/dotfiles)
+[![Mirror](https://github.com/wombelix/dotfiles/actions/workflows/mirror.yml/badge.svg)](https://github.com/wombelix/dotfiles/actions/workflows/mirror.yml)
+<!-- markdownlint-enable MD013 -->
 
 ## Table of Contents
 
@@ -18,26 +21,25 @@ Just my configs and dotfiles for things like `vim` or `tmux` with some helper sc
 
 ## Source
 
-The primary location is: https://git.sr.ht/~wombelix/dotfiles
+The primary location is:
+[github.com/wombelix/dotfiles](https://github.com/wombelix/dotfiles)
 
-Mirrors of the repository are available on
-[Codeberg](https://codeberg.org/wombelix/dotfiles),
-[Gitlab](https://gitlab.com/wombelix/dotfiles) and
-[Github](https://github.com/wombelix/dotfiles).
+Mirrors are available on
+[Codeberg](https://codeberg.org/wombelix/dotfiles) and
+[Gitlab](https://gitlab.com/wombelix/dotfiles).
 
 ## Contribute
 
-Please don't hesitate to provide Feedback, open an Issue or create an Pull / Merge Request.
+Pick the platform you prefer and are most comfortable with.
 
-Just pick the workflow or platform you prefer and are most comfortable with.
-
-Feedback, bug reports or patches to my sr.ht list [~wombelix/inbox@lists.sr.ht](https://lists.sr.ht/~wombelix/inbox)
-or via [Email or Instant Messaging](https://dominik.wombacher.cc/pages/contact.html) are also always welcome.
+Provide feedback, open an issue or create a pull / merge request.
 
 ## License
 
 Unless otherwise stated: `MIT`
 
-All files contain license information either as `header comment` or `corresponding .license` file.
+All files contain license information either as a
+`header comment` or a `corresponding .license` file.
 
-[REUSE](https://reuse.software) from the [FSFE](https://fsfe.org/) implemented to verify license and copyright compliance.
+[REUSE](https://reuse.software) from the [FSFE](https://fsfe.org/)
+is implemented to verify license and copyright compliance.
