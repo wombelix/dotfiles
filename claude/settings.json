@@ -1,0 +1,15 @@
+{
+  "model": "opus",
+  "effortLevel": "high",
+  "outputStyle": "Concise",
+  "tui": "fullscreen",
+  "theme": "auto",
+  "agentPushNotifEnabled": true,
+  "includeGitInstructions": false,
+  "attribution": { "commit": "", "pr": "" },
+  "enabledPlugins": {
+    "ruby-lsp@claude-plugins-official": true,
+    "gopls-lsp@claude-plugins-official": true,
+    "security-guidance@claude-plugins-official": true
+  }
+}
