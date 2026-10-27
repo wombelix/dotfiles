@@ -138,7 +138,7 @@ Words and phrases:
 smoking gun, guard, genuine, legitimate, outright, borderline, settle,
 this is gold, factual, straight, load-bearing (also without hyphen), dangling,
 tension, natural, kills, the key, is sound, despite, carry, matter,
-named (only this form), coarse, wired, stamped, touchpoints, cut,
+stamped, touchpoints, cut,
 detail sits here, spell out, are real, hang off, bookkeeping, lands, upserted,
 bucketing, surfaced, canned, silently, at a glance, verdict, harness, cope,
 age out, call site, shape, goes away, emit, unshifts, headroom, defend, dead,
