@@ -6,7 +6,11 @@
   "theme": "auto",
   "agentPushNotifEnabled": true,
   "includeGitInstructions": false,
-  "attribution": { "commit": "", "pr": "" },
+  "attribution": {
+    "commit": "",
+    "pr": "",
+    "sessionUrl": false
+  },
   "enabledPlugins": {
     "ruby-lsp@claude-plugins-official": true,
     "gopls-lsp@claude-plugins-official": true,
