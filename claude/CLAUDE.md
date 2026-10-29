@@ -142,7 +142,7 @@ stamped, touchpoints, cut,
 detail sits here, spell out, are real, hang off, bookkeeping, lands, upserted,
 bucketing, surfaced, canned, silently, at a glance, verdict, harness, cope,
 age out, call site, shape, goes away, emit, unshifts, headroom, defend, dead,
-footgun, live in, ship, sentinel
+footgun, live in, ship, sentinel, mint
 
 Sentence patterns (X and Y stand for any words):
 
