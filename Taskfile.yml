@@ -1,0 +1,12 @@
+# SPDX-FileCopyrightText: 2026 Dominik Wombacher <dominik@wombacher.cc>
+#
+# SPDX-License-Identifier: MIT
+
+version: '3'
+
+tasks:
+  claude:
+    desc: Copy Claude Code CLAUDE.md and settings.json to ~/.claude
+    cmds:
+      - mkdir -p "$HOME/.claude"
+      - cp claude/CLAUDE.md claude/settings.json "$HOME/.claude/"
