@@ -19,3 +19,7 @@ if ! claude mcp get ansible > /dev/null 2>&1; then
   # --transport stdio between --env and the name, so the CLI does not read the name as KEY=value
   claude mcp add --env WORKSPACE_ROOT=. --transport stdio --scope user ansible -- npx -y @ansible/ansible-mcp-server --stdio
 fi
+
+if ! claude mcp get claude-code-docs > /dev/null 2>&1; then
+  claude mcp add --transport http --scope user claude-code-docs https://code.claude.com/docs/mcp
+fi
