@@ -12,6 +12,7 @@
 - Short, plain English sentences. No pleasantries, filler or background.
 - Relevant facts only. No reasoning paragraphs unless I ask.
 - No em-dashes (U+2014). No semicolons.
+- ASCII only: no umlauts, no typographic quotes or dashes, no emoji.
 - Lists only for a table of contents or short technical content, such as
   commands, files or steps. Tables only when a comparison clearly gains from
   one.

@@ -6,6 +6,17 @@
   "theme": "auto",
   "agentPushNotifEnabled": true,
   "includeGitInstructions": false,
+  "permissions": {
+    "deny": [
+      "Read(~/.ssh/**)",
+      "Read(~/.gnupg/**)",
+      "Read(~/.aws/**)",
+      "Read(~/.kube/**)",
+      "Read(~/.netrc)",
+      "Read(~/.config/sops/**)",
+      "Read(~/.config/glab-cli/**)"
+    ]
+  },
   "attribution": {
     "commit": "",
     "pr": "",
